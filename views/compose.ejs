@@ -1,0 +1,29 @@
+<!--Including header.ejs file-->
+<%- include ("partials/header") -%>
+<div>
+
+<h1>Compose New Blog-post:</h1>
+
+<h4> <%= composeDisplayDateInEnglish %> or <%= composeDisplayDateInBengali %> </h4>
+
+<p> <%= composeDefaultDisplayContent %></p>
+
+<form class="" action="/compose" method="post">
+<div class="form-group"> 
+    <label>Subject</label>
+    <input type="text" class="form-control" name="subjectTextBox" placeholder="Subject or Title" autocomplete="on" autofocus="Yes" style="background-color:#F9E2AF;" required >
+    <label> Blog Post</label>
+    <textarea id="textarea1" rows="5" cols="30" class="form-control" name="addNewBlogPostTextArea" placeholder="Add a new blog post here" autocomplete="on" autofocus="Yes" style="background-color:#F9E2AF;" required></textarea>
+</div>
+
+<button class="btn btn-success btn-lg" type="submit" name="blogPostButton" value= "">  Publish Your Blog </button>
+
+    
+
+    
+   </form>
+
+</div>
+
+<!--Including footer.ejs file-->
+<%- include ("partials/footer") -%>

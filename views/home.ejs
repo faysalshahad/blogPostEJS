@@ -1,0 +1,66 @@
+<!--Including header.ejs file-->
+<%- include ("partials/header") -%>
+
+<div>
+    <h1>Home</h1>
+
+    <h4> <%= homeDisplayDateInEnglish %> or <%= homeDisplayDateInBengali %> </h4>
+    <p> <%= homeDefaultDisplayContent %></p>
+
+</div>
+<!--
+<% for(var i=0; i<newlyAddedPostbyUser.length; i++) { %>
+
+    <div class="box2">  
+
+    <p style="text-align: center;"> 
+         <%= homeDisplayDateInEnglish %> or <%= homeDisplayDateInBengali %>
+         <br> 
+        <%= newlyAddedPostbyUser[i].userSubject %>
+    </p>
+
+</div>
+
+<div class="box">  
+    
+    <p> <%= newlyAddedPostbyUser[i].useBlogPost %></p>
+</div>
+
+<% } %>
+
+-->
+
+<!-- Far better way to fetch data from an Array. Very effficient way to programme. 
+    item represents each individual array item.
+newlyAddedPostbyUser is coming from app.js-->
+
+<% newlyAddedPostbyUser.forEach(function (item){ %>
+
+    <div class="box2">  
+
+        <h4> 
+            
+             <!-- usersubject is coming from app.js-->
+            <%= item.userSubject %>
+        </h4>
+            
+             
+        
+    
+    </div>
+
+    <div class="box">  
+    <!-- useBlogPost is coming from app.js and substring method is truncating or shortening a large blog
+    posts. + .... is a visual representation of truncating something and indicating user to click on it to
+read the full post-->
+        <p> 
+            <%= item.useBlogPost.substring(0, 300) + "......." %> 
+            <a href="/blogPostArray/<%=item.userSubject%>">Find out more about this blog</a>
+        </p>
+    </div>
+
+
+<% }) %>
+
+<!--Including footer.ejs file-->
+<%- include ("partials/footer") -%>
