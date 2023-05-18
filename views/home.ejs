@@ -41,7 +41,7 @@ newlyAddedPostbyUser is coming from app.js-->
         <h4> 
             
              <!-- usersubject is coming from app.js-->
-            <%= item.userSubject %>
+            <%= item.blogTitle %>
         </h4>
             
              
@@ -54,8 +54,8 @@ newlyAddedPostbyUser is coming from app.js-->
     posts. + .... is a visual representation of truncating something and indicating user to click on it to
 read the full post-->
         <p> 
-            <%= item.useBlogPost.substring(0, 300) + "......." %> 
-            <a href="/blogPostArray/<%=item.userSubject%>">Find out more about this blog</a>
+            <%= item.blogContent.substring(0, 300) + "......." %> 
+            <a href="/posts/<%=item._id%>">Find out more about this blog</a>
         </p>
     </div>
 
