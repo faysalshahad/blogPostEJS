@@ -62,9 +62,7 @@ is the folder name where our static files like CSS and images will reside.*/
 app.use(express.static("public"));
 
 // connection URL to mongoDB Atlas Cloud Server database where blogpoststDB is the database name
-//mongoose.connect("mongodb+srv://faysalshahad:F008801716500376@faysalshahad.nbqqn3d.mongodb.net/blogpostDB", {useNewUrlParser:true, useUnifiedTopology:true});
-//mongoose.connect("mongodb+srv://faysalshahad:F008801716500376@faysalshahad.nbqqn3d.mongodb.net/blogpostDB", {useNewUrlParser:true, useUnifiedTopology:true});
-mongoose.connect("mongodb+srv://faysalshahad:F008801716500376@faysalshahad.nbqqn3d.mongodb.net/blogpostDB", {useNewUrlParser:true, useUnifiedTopology:true});
+mongoose.connect("mongodb+srv://faysalshahad:<put your password. for safety i did not put it in public folder>@faysalshahad.nbqqn3d.mongodb.net/blogpostDB", {useNewUrlParser:true, useUnifiedTopology:true});
 
 // connection URL to mongoose database locally where blogpostDB is the database name
 //mongoose.connect("mongodb://127.0.0.1:27017/blogpostDB", {useNewUrlParser:true, useUnifiedTopology:true});
